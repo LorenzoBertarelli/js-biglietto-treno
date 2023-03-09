@@ -15,11 +15,13 @@ console.log(FinalPrice);
 if(UserAge<18){
     FinalPrice=FinalPrice*(1-0.20)
 }
-else if(UserAge>65){
+else if(UserAge>=65){
     FinalPrice=FinalPrice*(1-0.40)
 }
 console.log(FinalPrice);
 
 // Risultato a schermo
 
-document.getElementById("result").innerHTML = FinalPrice;
+const message = `Il prezzo del biglietto è € ${FinalPrice.toFixed(2)}`;
+
+document.getElementById("result").innerHTML = message;
